@@ -1,0 +1,44 @@
+*{
+    margin : 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 1em;
+    border-radius: 2px;
+    background-color: rgb(100, 143, 218);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.progress{
+    height: 10px;
+    width: 300px;
+    background-color: rgba(189, 174, 174, 0.647);
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+.progress .prog{
+    height: 100%;
+    width: 0%;
+    border-radius: 5px;
+    background-color: rgb(100, 143, 218);
+    box-shadow: 0px 6px 10px rgb(143, 162, 199);
+    transition: width 0.15s;
+}.speed-test{
+    font-size: 2em;
+    font-weight: bolder;
+    color: rgb(100, 143, 218);
+    margin-bottom: 10px;
+}
