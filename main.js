@@ -3,8 +3,8 @@ const button = document.querySelector("button");
 const size =(1965253)*8;
 const test_count = 160;
 // Frontend 
-const progress = document.querySelector("progress");
-const speedTest = document.querySelector("speed-test")
+const progress = document.querySelector(".prog");
+const speedTest = document.querySelector(".speed-test")
 
 let speed_result = [];
 
@@ -27,10 +27,10 @@ function loadImage(){
     })
 }
 async function loadSpeed(){
+    let loadTime = await loadImage();
     if (loadTime < 1) loadTime = 1;
-    let loadTime = await loadImage;
     let speed_bps = size/loadTime;
-    let speed_kps =  speed_bps/1024;
+    let speed_kbps =  speed_bps/1024;
 }
 
 function avSpeed(){
@@ -45,5 +45,5 @@ button.addEventListener('click', async function(){
         progress.style.width = ((i+1)/test_count*100)+"%";
     }
     console.log(avSpeed());
-    speedTest.innerText = avSpeed().toFixed(2)+" kps";
+    speedTest.innerText = avSpeed().toFixed(2)+" kbps";
 })
