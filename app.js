@@ -81,7 +81,7 @@ button.addEventListener("click", async () => {
           if (speedHistory.length > maxHistory) speedHistory.shift(); // Keep only latest N
 
           if (hasStableSpeed()) {
-            abortController.abort(); // ✅ Stop early if speed is stable
+            abortController.abort(); //  Stop early if speed is stable
             break;
           }
 
